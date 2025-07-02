@@ -5,7 +5,7 @@ import { FiShoppingCart } from "react-icons/fi";
 import axios from "axios";
 import BusinessPopup from "../components/popup";
 
-const BIN_ID = "68468e468960c979a5a6e612"; // Your bin ID
+const BIN_ID = "6864f0d78960c979a5b5b7ad"; // Your bin ID
 const API_KEY = "$2a$10$yti1izYQ7PKY9IhwxrQiuuIk8TZDdxM6nzYFnduMOvJtKIdyRhBB.";
 const headers = {
   "X-Master-Key": API_KEY,

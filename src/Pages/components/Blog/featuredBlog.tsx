@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import { FaArrowAltCircleRight } from "react-icons/fa";
 
-const JSON_BIN_ID = "68468cf18561e97a50214a90"; // Replace with your JSONBin bin ID
+const JSON_BIN_ID = "6864f1c28a456b7966b9f43b"; // Replace with your JSONBin bin ID
 const API_KEY = "$2a$10$yti1izYQ7PKY9IhwxrQiuuIk8TZDdxM6nzYFnduMOvJtKIdyRhBB."; // Replace with your JSONBin API Key
 const BASE_URL = `https://api.jsonbin.io/v3/b/${JSON_BIN_ID}`;
 

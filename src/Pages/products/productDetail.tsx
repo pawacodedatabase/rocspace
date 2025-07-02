@@ -15,7 +15,7 @@ interface WishlistItem {
   productId: number;
 }
 
-const BIN_ID = "68468e468960c979a5a6e612"; // Your JSONBin ID
+const BIN_ID = "6864f0d78960c979a5b5b7ad"; // Your JSONBin ID
 const API_KEY = "$2a$10$yti1izYQ7PKY9IhwxrQiuuIk8TZDdxM6nzYFnduMOvJtKIdyRhBB."; // Your API key
 const headers = {
   "X-Master-Key": API_KEY,

@@ -11,7 +11,7 @@ interface Product {
 
 
 
-}const BIN_ID = "68468e468960c979a5a6e612";
+}const BIN_ID = "6864f0d78960c979a5b5b7ad";
 const API_KEY = "$2a$10$yti1izYQ7PKY9IhwxrQiuuIk8TZDdxM6nzYFnduMOvJtKIdyRhBB.";
 const headers = {
   "X-Master-Key": API_KEY,
@@ -62,44 +62,54 @@ const FeaturedProduct: React.FC = () => {
     <div className="mt-8">
       <h2 className="text-2xl font-bold text-center mb-6 font-riss">Featured Products</h2>
     
-    <div className='flex justify-center flex-wrap'>
-       <div className="grid grid-cols-2 gap-6 sm:grid-cols-3 sm:gap-4 p-5">
-        {randomProducts.map((product: Product) => (
-          <div
-            key={product.id}
-            className="bg-black border border-gray-200 shadow-md rounded-lg overflow-hidden transition-transform duration-300 hover:scale-105"
-          >
-            {/* Product Image */}
-            <Link to={`/product/${product.id}`}>
-              <img
-                src={product.images[0]}
-                alt={product.name}
-                className="w-full h-[500px] object-cover"
-              />
-            </Link>
+  <div className="flex justify-center">
+  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 p-5 max-w-7xl w-full">
+    {randomProducts.map((product: Product) => (
+      <div
+        key={product.id}
+        className="group relative bg-white border border-gray-200 rounded-md overflow-hidden shadow-md transition-transform duration-300 hover:scale-105 w-full max-w-[350px] mx-auto"
+      >
+        {/* Image Swap on Hover */}
+        <Link to={`/product/${product.id}`} className="block relative w-full h-[500px]">
+          <img
+            src={product.images[0]}
+            alt={product.name}
+            className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:opacity-0"
+          />
+          {product.images[1] && (
+            <img
+              src={product.images[1]}
+              alt={`${product.name} alt`}
+              className="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+            />
+          )}
+        </Link>
 
-            {/* Product Details */}
-          <p className="text-sm font-semibold text-white p-4  mt-1">
-  {typeof product.price === 'number'
-    ? `₦${product.price.toLocaleString()}`
-    : 'Price Unavailable'}
+        {/* Hover "SELECT OPTIONS" Button */}
+        <div className="absolute bottom-0 left-0 right-0 bg-black text-white text-center text-sm py-3 opacity-0 group-hover:opacity-100 transition duration-300 cursor-pointer">
+          SELECT OPTIONS
+        </div>
 
-  {typeof product.originalPrice === 'number' && (
-    <span className="text-gray-500 text-xs line-through ml-2">
-      ₦{product.originalPrice.toLocaleString()}
-    </span>
-  )}
-</p>
+        {/* Product Name */}
+        <p className="text-center text-black text-xs mt-4 tracking-wide">{product.name.toUpperCase()}</p>
 
-          </div>
-        ))}
+        {/* Price */}
+        <p className="text-center text-[#111] text-sm font-semibold mb-4">
+          {typeof product.price === 'number'
+            ? `₦${product.price.toLocaleString()}`
+            : 'Price Unavailable'}
 
+          {typeof product.originalPrice === 'number' && (
+            <span className="text-gray-500 text-xs line-through ml-2">
+              ₦{product.originalPrice.toLocaleString()}
+            </span>
+          )}
+        </p>
+      </div>
+    ))}
+  </div>
+</div>
 
-
-
-             </div>
-
-      </div> 
               <div className="flex justify-center">
   <Link to="/shop">
     <button className="bg-black text-white p-4 mb-5">View All Products</button>

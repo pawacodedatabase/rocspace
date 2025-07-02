@@ -3,7 +3,7 @@ import axios from "axios";
 import { Product } from "../Pages/products/product";
 import AdminBlog from "./components/Blog/adminBlog";
 
-const BIN_ID = "68468e468960c979a5a6e612";
+const BIN_ID = "6864f0d78960c979a5b5b7ad";
 const API_KEY = "$2a$10$yti1izYQ7PKY9IhwxrQiuuIk8TZDdxM6nzYFnduMOvJtKIdyRhBB.";
 const CLOUD_NAME = "dunczn7o7";
 const UPLOAD_PRESET = "luxxbukola";

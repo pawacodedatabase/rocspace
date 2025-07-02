@@ -25,7 +25,7 @@ const Cart: React.FC = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await fetch("https://api.jsonbin.io/v3/b/68468e468960c979a5a6e612/latest", {
+        const res = await fetch("https://api.jsonbin.io/v3/b/6864f0d78960c979a5b5b7ad/latest", {
           headers: {
             "X-Master-Key": "$2a$10$yti1izYQ7PKY9IhwxrQiuuIk8TZDdxM6nzYFnduMOvJtKIdyRhBB.",
           },

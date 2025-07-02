@@ -12,7 +12,7 @@ import img from "../../../assets/new.jpg";
 import fav from "../../../assets/logo.jpg";
 import FeaturedBlog from "./featuredBlog";
 
-const JSON_BIN_ID = "68468cf18561e97a50214a90";
+const JSON_BIN_ID = "6864f1c28a456b7966b9f43b";
 const API_KEY = "$2a$10$yti1izYQ7PKY9IhwxrQiuuIk8TZDdxM6nzYFnduMOvJtKIdyRhBB.";
 const BASE_URL = `https://api.jsonbin.io/v3/b/${JSON_BIN_ID}`;
 

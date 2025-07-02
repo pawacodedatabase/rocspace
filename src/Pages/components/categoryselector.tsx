@@ -10,7 +10,7 @@ import { Link, useNavigate } from "react-router-dom";
 import bag from '../../assets/clt.webp'
 import bag2 from '../../assets/rose.jpg';
 
-const BIN_ID = "68468e468960c979a5a6e612";
+const BIN_ID = "6864f0d78960c979a5b5b7ad";
 const API_KEY = "$2a$10$yti1izYQ7PKY9IhwxrQiuuIk8TZDdxM6nzYFnduMOvJtKIdyRhBB.";
 
 
