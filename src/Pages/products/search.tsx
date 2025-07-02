@@ -65,7 +65,7 @@ const SearchBar: React.FC = () => {
                   </td>
                   <td className="border px-4 py-2">{product.name}</td>
                   <td className="border px-4 py-2  font-bold text-red-500">
-                  ₦{product.price}
+                  ${product.price}
                   </td>
                   <td className="border px-4 py-2 text-center">
                     <button

@@ -184,10 +184,10 @@ export default function ProductPage() {
                 <div className="p-4">
                   <h3 className="font-thin text-lg">{product.name}</h3>
                   <p className="font-semibold text-red-500 text-lg mt-2">
-                    ₦{product.price}
+                    ${product.price}
                     {product.originalPrice && (
                       <span className="line-through text-gray-500 ml-2">
-                        ₦{product.originalPrice}
+                        ${product.originalPrice}
                       </span>
                     )}
                   </p>

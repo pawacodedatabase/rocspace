@@ -105,7 +105,7 @@ const Wishlist: React.FC = () => {
                   />
                   <div className="p-4">
                     <h2 className="text-lg font-semibold text-gray-800 truncate">{product.name}</h2>
-                    <p className="text-gray-600 mt-2">₦{product.price.toFixed(2)}</p>
+                    <p className="text-gray-600 mt-2">${product.price.toFixed(2)}</p>
                     <div className="flex items-center justify-between mt-4">
                       {/* Add to Cart */}
                       <button

@@ -167,9 +167,9 @@ const Cart: React.FC = () => {
                             </button>
                           </div>
                         </td>
-                        <td className="py-4 px-6 text-center">₦{product.price.toFixed(2)}</td>
+                        <td className="py-4 px-6 text-center">${product.price.toFixed(2)}</td>
                         <td className="py-4 px-6 text-center">
-                          ₦{(item.quantity * product.price).toFixed(2)}
+                          ${(item.quantity * product.price).toFixed(2)}
                         </td>
                         <td className="py-4 px-6 text-center">
                           <button
@@ -213,19 +213,19 @@ const Cart: React.FC = () => {
 
               <div className="flex justify-between items-center text-lg text-gray-600">
                 <span>Subtotal:</span>
-                <span>₦{totalPrice.toFixed(2)}</span>
+                <span>${totalPrice.toFixed(2)}</span>
               </div>
 
               {discountApplied && (
                 <div className="flex justify-between items-center text-lg text-green-500">
                   <span>Discount (5%):</span>
-                  <span>-₦{(totalPrice * 0.05).toFixed(2)}</span>
+                  <span>-${(totalPrice * 0.05).toFixed(2)}</span>
                 </div>
               )}
 
               <div className="flex justify-between items-center text-xl font-semibold text-gray-700 mt-4">
                 <span>Total:</span>
-                <span>₦{finalTotal.toFixed(2)}</span>
+                <span>${finalTotal.toFixed(2)}</span>
               </div>
             </div>
 

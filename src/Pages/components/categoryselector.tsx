@@ -107,7 +107,7 @@ export default function CategorySelector() {
         />
         <h3 className="font-semibold text-sm text-[#ccc]">{product.name}</h3>
         <p className="text-gray-300 text-xs">{product.category}</p>
-        <p className="font-bold text-yellow-300 text-sm">N{product.price}</p>
+        <p className="font-bold text-red-500 text-sm">${product.price}</p>
       </Link>
     </div>
   ))}
@@ -118,7 +118,7 @@ export default function CategorySelector() {
           <div className="mt-6 text-center">
             <button
               onClick={() => navigate("/shop")}
-              className="bg-black text-white px-6 py-2 rounded hover:border-2 hover:border-black hover:text-white hover:bg-white transition"
+              className="bg-black text-white px-6 py-2 rounded hover:border-2 hover:border-black hover:text-black hover:bg-white transition"
             >
               Go to Shop
             </button>

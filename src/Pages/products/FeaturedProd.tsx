@@ -94,12 +94,12 @@ const FeaturedProduct: React.FC = () => {
         {/* Price */}
         <p className="text-center text-[#111] text-sm font-semibold mb-4">
           {typeof product.price === 'number'
-            ? `₦${product.price.toLocaleString()}`
+            ? `$${product.price.toLocaleString()}`
             : 'Price Unavailable'}
 
           {typeof product.originalPrice === 'number' && (
             <span className="text-gray-500 text-xs line-through ml-2">
-              ₦{product.originalPrice.toLocaleString()}
+              ${product.originalPrice.toLocaleString()}
             </span>
           )}
         </p>

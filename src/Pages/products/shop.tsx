@@ -176,10 +176,10 @@ const Shop: React.FC = () => {
 
                   {/* Display price with slash if on sale */}
                   <p className="font-semibold  text-red-500 text-lg mt-2">
-                    ₦{product.price}
+                    ${product.price}
                     {product.originalPrice && (
                       <span className="line-through text-gray-500 ml-2">
-                        ₦{product.originalPrice}
+                        ${product.originalPrice}
                       </span>
                     )}
                   </p>

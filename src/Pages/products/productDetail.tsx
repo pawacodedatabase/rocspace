@@ -207,10 +207,10 @@ const ProductDetail: React.FC = () => {
                 <p className="text-sm text-gray-600 mt-2 p-2">{product.description}</p>
 
                 <div className="flex items-center mt-4">
-                  <p className="text-2xl font-bold text-gray-800">₦{product.price.toFixed(2)}</p>
+                  <p className="text-2xl font-bold text-gray-800">${product.price.toFixed(2)}</p>
                   {product.isOnSale && product.originalPrice && (
                     <p className="text-sm text-red-500 line-through ml-4">
-                      ₦{product.originalPrice.toFixed(2)}
+                      ${product.originalPrice.toFixed(2)}
                     </p>
                   )}
                 </div>

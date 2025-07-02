@@ -140,7 +140,7 @@ const Checkout: React.FC = () => {
                     <td className="p-2 border">{product.name}</td>
                     <td className="p-2 border">{item.quantity}</td>
                     <td className="p-2 border">
-                      ₦{(item.quantity * product.price).toLocaleString()}
+                      ${(item.quantity * product.price).toLocaleString()}
                     </td>
                   </tr>
                 ) : null;
@@ -161,16 +161,16 @@ const Checkout: React.FC = () => {
               <option value="">Select</option>
               {deliveryFees.map((state) => (
                 <option key={state.state} value={state.state}>
-                  {state.state} – ₦{state.fee.toLocaleString()}
+                  {state.state} – ${state.fee.toLocaleString()}
                 </option>
               ))}
             </select>
           </div>
 
           <div className="mt-4 text-right">
-            <h3 className="text-lg font-semibold">Delivery: ₦{deliveryFee.toLocaleString()}</h3>
+            <h3 className="text-lg font-semibold">Delivery: ${deliveryFee.toLocaleString()}</h3>
             <h3 className="text-xl font-bold text-[#1a2d42]">
-              Total: ₦{(totalPrice + deliveryFee).toLocaleString()}
+              Total: ${(totalPrice + deliveryFee).toLocaleString()}
             </h3>
           </div>
         </div>

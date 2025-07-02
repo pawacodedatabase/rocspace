@@ -23,14 +23,14 @@ const PaymentPage: React.FC = () => {
 *Address:* ${order.billingInfo.address}
 *Phone:* ${order.billingInfo.phone}
 *Delivery State:* ${order.deliveryState}
-*Delivery Fee:* ₦${order.deliveryFee.toLocaleString()}
-*Total:* ₦${order.totalAmount.toLocaleString()}
+*Delivery Fee:* $${order.deliveryFee.toLocaleString()}
+*Total:* $${order.totalAmount.toLocaleString()}
 
 🛍️ *Items:*
 ${order.items
   .map(
     (item: any) =>
-      `• ${item.name} x${item.quantity} — ₦${item.total.toLocaleString()}`
+      `• ${item.name} x${item.quantity} — $${item.total.toLocaleString()}`
   )
   .join("\n")}
     `.trim();
@@ -81,10 +81,10 @@ ${order.items
           <h1 className="text-2xl font-bold mb-4 text-[#1a2d42]">Payment Instructions</h1>
 
           <div className="mb-6 p-4 border rounded bg-gray-100">
-            <h2 className="font-semibold mb-2 text-[#234156]">Transfer Payment (₦{order.totalAmount.toLocaleString()}) To:</h2>
+            <h2 className="font-semibold mb-2 text-[#234156]">Transfer Payment (${order.totalAmount.toLocaleString()}) To:</h2>
             <p><strong>Bank:</strong> {BANK_NAME}</p>
             <p><strong>Account Number:</strong> {BANK_ACCOUNT_NUMBER}</p>
-            <p><strong>Amount:</strong> ₦{order.totalAmount.toLocaleString()}</p>
+            <p><strong>Amount:</strong> ${order.totalAmount.toLocaleString()}</p>
           </div>
 
           <div className="mb-6 border rounded p-4 bg-gray-50">
@@ -95,13 +95,13 @@ ${order.items
             <ul className="space-y-2">
               {order.items.map((item: any, idx: number) => (
                 <li key={idx} className="text-sm">
-                  {item.name} x{item.quantity} — ₦{item.total.toLocaleString()}
+                  {item.name} x{item.quantity} — ${item.total.toLocaleString()}
                 </li>
               ))}
             </ul>
             <p className="mt-4 text-right font-semibold">
-              Delivery Fee: ₦{order.deliveryFee.toLocaleString()} <br />
-              <span className="text-lg">Total: ₦{order.totalAmount.toLocaleString()}</span>
+              Delivery Fee: ${order.deliveryFee.toLocaleString()} <br />
+              <span className="text-lg">Total: ${order.totalAmount.toLocaleString()}</span>
             </p>
           </div>
 
