@@ -276,7 +276,7 @@ export default function AdminPage() {
               <div className="flex-1">
                 <h2 className="text-lg font-semibold">{product.name}</h2>
                 <p className="text-sm text-gray-500">{product.category}</p>
-                <p className="font-bold text-blue-600">N{product.price}</p>
+                <p className="font-bold text-blue-600">${product.price}</p>
                 {product.originalPrice && (
                   <p className="text-sm line-through text-gray-400">N{product.originalPrice}</p>
                 )}

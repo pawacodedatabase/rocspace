@@ -203,7 +203,13 @@ const ProductDetail: React.FC = () => {
               </div>
 
               <div className="mt-6">
-                <h1 className="text-3xl font-bold text-gray-800 text-center font-riss">{product.name}</h1>
+                <h1 className="text-3xl font-bold text-gray-800 text-center font-graffiti">
+  <span className="text-red-600">
+    {product.name.split(" ")[0]}
+  </span>{" "}
+  {product.name.split(" ").slice(1).join(" ")}
+</h1>
+
                 <p className="text-sm text-gray-600 mt-2 p-2">{product.description}</p>
 
                 <div className="flex items-center mt-4">
@@ -350,19 +356,25 @@ const ProductDetail: React.FC = () => {
       
         <div>
           <div className="mt-8 border-t pt-6">
-            <h2 className="text-2xl  text-gray-800 text-center font-riss">About the Brand</h2>
+            <h1 className="text-3xl font-bold text-gray-800 text-center font-graffiti">
+  <span className="text-red-600">
+    About
+  </span>{" "}
+ Millionaire Boys Club
+</h1>
+
             <p className="text-sm text-gray-800 mt-2 text-center">
-  CrystalVibe specializes in luxurious oufits. Our mission is to add elegance and sophistication to your wardrobe, all at affordable prices.
+ Rocspace is a premium clothing brand specializing in luxurious outfits. Our mission is to bring elegance and sophistication to your wardrobe without breaking the bank.
 </p>
 
           </div>
 
           {/* Social Media */}
           <div className="mt-6 flex justify-center space-x-4">
-            <a href="mailto:luxx" className="text-black hover:text-red-500">
+            <a href="mailto:rockspace" className="text-black hover:text-red-500">
               <FaEnvelope size={24} />
             </a>
-            <a href="https://instagram.com/luxebybuolaa" className="text-black hover:text-red-500">
+            <a href="https://instagram.com/rocspace_mbc" className="text-black hover:text-red-500">
               <FaInstagram size={24} />
             </a>
           </div>

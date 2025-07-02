@@ -87,12 +87,12 @@ const FeaturedProduct: React.FC = () => {
         </Link>
 
        
-
+<div className='flex px-4 justify-between mb-4 mt-4'>
         {/* Product Name */}
-        <p className="text-center text-black text-xs mt-4 tracking-wide">{product.name.toUpperCase()}</p>
+        <p className="text-center text-black text-xs tracking-wide">{product.name.toUpperCase()}</p>
 
         {/* Price */}
-        <p className="text-center text-[#111] text-sm font-semibold mb-4">
+        <p className="text-center text-[#111] text-sm font-bold ">
           {typeof product.price === 'number'
             ? `$${product.price.toLocaleString()}`
             : 'Price Unavailable'}
@@ -103,6 +103,8 @@ const FeaturedProduct: React.FC = () => {
             </span>
           )}
         </p>
+</div>
+
       </div>
     ))}
   </div>
