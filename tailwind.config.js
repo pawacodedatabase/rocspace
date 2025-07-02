@@ -37,6 +37,7 @@ export default {
         sans: ['Helvetica', 'Arial', 'sans-serif'], // Set a default sans-serif font family
         display: ['Oswald', 'sans-serif'], 
         riss: ['Pacifico', 'serif'],
+         graffiti: ['"Fredericka the Great"', 'cursive'],
       },
       boxShadow: {
         'xl': '0 4px 6px rgba(0, 0, 0, 0.1)', // Custom shadow style for cards or buttons

@@ -63,7 +63,7 @@ export default function CategorySelector() {
 
   return (
     <div className="p-6 max-w-7xl mx-auto">
-      <h1 className="text-2xl font-bold mb-6 text-center">Browse Category</h1>
+      <h1 className="text-2xl font-bold mb-6 text-center  font-graffiti"> <span className="text-red-500">Browse</span> Category</h1>
 
       {/* Category Cards in a Row */}
       <div className="flex gap-4 mb-8 justify-center">
@@ -79,7 +79,7 @@ export default function CategorySelector() {
             }}
           >
             <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-              <h2 className="text-white text-sm font-semibold text-center px-2">
+              <h2 className="text-white text-sm font-semibold text-center px-2 ">
                 {cat.label}
               </h2>
             </div>

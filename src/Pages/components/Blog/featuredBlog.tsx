@@ -44,8 +44,8 @@ const FeaturedBlog: React.FC = () => {
 
   return (
     <div className="max-w-3xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-      <h2 className="text-2xl font-semibold text-center mb-4 ">
-        Featured Blogs
+      <h2 className="text-2xl font-bold  font-graffiti text-center mb-4 ">
+        <span className="text-red-500">Featured</span>  Blogs
       </h2>
 
       {loading ? (
@@ -72,12 +72,16 @@ const FeaturedBlog: React.FC = () => {
              
              <img src={logo} alt="Blog Logo" className="w-24 mx-auto mb-3" />
               <h4 className="text-xl text-blackfont-bold flex items-center gap-2">
-                <FaArrowAltCircleRight className="text-blue-500" />
-                {blog.title}
+                <FaArrowAltCircleRight className="text-red-500 " />
+               <p className="font-graffiti font-bold">
+  <span className="text-red-500">{blog.title.split(" ")[0]}</span>{" "}
+  {blog.title.split(" ").slice(1).join(" ")}
+</p>
+
               </h4>
               <p className="text-sm text-gray-500 mt-3">
                 {blog.content.slice(0, 120)}...
-                <Link to={`/blog/${blog.id}`} className="font-bold text-blue-500  underline ml-1">
+                <Link to={`/blog/${blog.id}`} className="font-bold text-red-500  underline ml-1">
                   Read More
                 </Link>
               </p>

@@ -54,11 +54,14 @@ const BlogDetail: React.FC = () => {
   return (
     <>
     
-      <div className="text-sm font-semibold ml-4 mt-8">
+      <div className="text-sm font-semibold ml-4 mt-8 font-graffiti">
         <Link to="/">Home</Link> | <Link to="/blog">Blog</Link> | {blog.title}
       </div>
       <div className="max-w-3xl mx-auto p-6 bg-white shadow-md rounded-lg">
-        <h1 className="text-3xl text-center font-bold mt-4 mb-8">{blog.title}</h1>
+       <h1 className="font-graffiti font-bold text-2xl text-center mb-4 pb-4  border-b-4 border-red-500 ">
+  <span className="text-red-500">{blog.title.split(" ")[0]}</span>{" "}
+  {blog.title.split(" ").slice(1).join(" ")}
+</h1>
 
         <div className="flex justify-between mb-6">
         <div className="flex items-center mt-2 text-xs">

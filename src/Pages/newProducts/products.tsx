@@ -143,7 +143,7 @@ export default function ProductPage() {
   return (
     <>
    <BusinessPopup/>
-    <div className="relative"> <h1 className="text-2xl font-thin text-center p-4">OUR COLLECTIONS</h1>
+    <div className="relative"> <h1 className="text-2xl font-bold font-graffiti text-center p-4"> <span className="text-red-500">OUR</span> COLLECTIONS</h1>
       <div className="flex flex-wrap justify-center gap-5 w-full p-6">
        
         {loading ? (
@@ -160,7 +160,7 @@ export default function ProductPage() {
             return (
               <div
                 key={product.id}
-                className="relative group w-[350px] overflow-hidden rounded-lg border border-gray-200 shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105"
+                className="relative group w-[350px] overflow-hidden rounded-lg border border-gray-200 shadow-lg transition-all duration-300 ease-in-out transform "
               >
                 {/* Sale badge */}
                 {product.originalPrice && (
@@ -174,7 +174,7 @@ export default function ProductPage() {
                   <img
                     src={hoveredImages[product.id] || product.images[0]}
                     alt={product.name}
-                    className="w-full h-60 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-60 object-cover transition-transform duration-300"
                     onMouseEnter={() => handleMouseEnter(product.id, product.images)}
                     onMouseLeave={() => handleMouseLeave(product.id, product.images)}
                   />
@@ -216,7 +216,7 @@ export default function ProductPage() {
                   ) : (
                     <button
                       onClick={() => handleAddToCart(product.id)}
-                      className="bg-[#000000] text-yellow-300 px-3 py-1 hover:bg-[#aab7b7] hover:text-black transition"
+                      className="bg-[#000000] text-red-600 px-3 py-1 hover:bg-[#aab7b7] hover:text-black transition"
                     >
                       <div className="flex gap-2">
                         <p className="text-xl">

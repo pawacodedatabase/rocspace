@@ -67,11 +67,16 @@ const Carousel: React.FC = () => {
           {/* Text Content */}
           <div className="relative z-20 flex items-center h-full px-8 md:px-24">
             <div className="max-w-xl text-black space-y-6">
-              <h1 className="text-3xl md:text-6xl font-serif font-semibold leading-tight">
-                {slide.title}
-              </h1>
-              <p className="text-base md:text-lg font-light">{slide.subtitle}</p>
-              <Link
+             <h1 className="text-3xl md:text-6xl font-graffiti font-semibold leading-tight">
+  <span className="text-red-600">{slide.title.split(' ')[0]}</span>{' '}
+  {slide.title.split(' ').slice(1).join(' ')}
+</h1>
+
+<p className="text-base md:text-lg font-graffiti font-bold">
+  <span className="text-red-600">{slide.subtitle.split(' ')[0]}</span>{' '}
+  {slide.subtitle.split(' ').slice(1).join(' ')}
+</p>
+         <Link
                 to="/shop"
                 className="inline-block bg-black text-white  text-sm font-semibold px-6 py-3 mt-4 rounded hover:border-2 hover:border-black hover:text-black hover:bg-white transition"
               >

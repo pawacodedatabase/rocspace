@@ -42,7 +42,7 @@ const Blog: React.FC = () => {
     <>
     {/* <BlogBanner/> */}
       <div className="max-w-4xl mx-auto p-6 bg-white shadow-lg rounded-lg">
-        <h2 className="text-3xl font-semibold text-center mb-4">Blog Section</h2>
+        <h2 className="text-3xl  text-center mb-4 font-bold font-graffiti"> <span className="text-red-500">Blog</span> Section</h2>
 
         {loading ? (
           <div className="space-y-4">
@@ -56,21 +56,25 @@ const Blog: React.FC = () => {
             ))}
           </div>
         ) : blogs.length === 0 ? (
-          <p className="text-gray-500 text-center">No blogs available.</p>
+          <p className="text-gray-500 text-center font-bold font-graffiti">No blogs available.</p>
         ) : (
           <>
           
           <div className="space-y-6">
             {blogs.map((blog) => (
               <div key={blog.id} className="border p-4 rounded bg-[#fff]">
-                <img src={logo} alt="" width={50} />
+                <img src={logo} alt="" width={100} />
                 <h4 className="text-xl text-black mt-3 font-bold flex gap-2">
-                  <FaArrowAltCircleRight className="text-gray-400 mt-1" />
-                  {blog.title}
+                  <FaArrowAltCircleRight className="text-red-400 mt-1" />
+                 <p className="font-graffiti font-bold">
+  <span className="text-red-500">{blog.title.split(" ")[0]}</span>{" "}
+  {blog.title.split(" ").slice(1).join(" ")}
+</p>
+
                 </h4>
                 <p className="text-sm text-gray-500 mt-3">
                   {blog.content.slice(0, 150)}...{" "}
-                  <Link to={`/blog/${blog.id}`} className="font-bold underline text-blue-500">
+                  <Link to={`/blog/${blog.id}`} className="font-bold underline text-red-500">
                     Read More
                   </Link>
                 </p>

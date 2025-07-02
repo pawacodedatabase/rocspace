@@ -4,44 +4,44 @@ import ReviewComponent from './components/review';
 
 const faqs = [
   {
-    question: "What makes Crystal Vibe Luxury unique?",
+    question: "What makes Rocspace different from other clothing brands?",
     answer:
-      "Crystal Vibe stands out for its blend of elegance, quality, and affordability. Each bag and pair of shoes is carefully designed to empower women with style and confidence.",
+      "Rocspace is where bold design meets everyday wear. We fuse streetwear attitude with premium quality to help you stand out and feel unstoppable.",
   },
   {
-    question: "How do you ensure the quality of your products?",
+    question: "Are Rocspace pieces durable?",
     answer:
-      "We source only high-quality materials and work with skilled artisans to create stylish, durable bags and shoes. Every item is thoroughly inspected to meet our luxury standards.",
+      "Absolutely. Each shirt and hoodie is made with premium fabrics and reinforced stitching, ensuring long-lasting wear and top-tier comfort.",
   },
   {
-    question: "Is Crystal Vibe committed to sustainability?",
+    question: "Do you release limited collections?",
     answer:
-      "Yes, we are. We take conscious steps towards sustainability by using ethically sourced materials and minimizing waste in our production process.",
+      "Yes. We regularly drop exclusive collections with limited runs—once they're gone, they’re gone. Follow us on social media or subscribe to stay in the loop.",
   },
   {
-    question: "What is your return policy?",
+    question: "What’s your return policy?",
     answer:
-      "We offer a 30-day return policy for unused items in their original packaging. If you're not satisfied, we're here to help make it right.",
+      "You have 30 days to return unused items in original condition and packaging. If something’s not right, we’ve got you covered.",
   },
   {
-    question: "Why should I trust Crystal Vibe Luxury?",
+    question: "Why trust Rocspace?",
     answer:
-      "Crystal Vibe has earned the trust of stylish women nationwide through our dedication to quality, customer service, and timeless designs.",
+      "Thousands of customers trust Rocspace for our focus on quality, originality, and street-level authenticity. We're not just clothing — we're culture.",
   },
   {
-    question: "Do you offer custom or limited edition designs?",
+    question: "Can I customize my order?",
     answer:
-      "Yes, we occasionally release exclusive collections and limited-edition pieces. Be sure to follow us on social media or subscribe to our newsletter for updates.",
+      "We occasionally offer personalization or one-off pieces. Be on the lookout during special drops or collaborations.",
   },
   {
-    question: "How do I know my shoe size will fit?",
+    question: "How do I choose the right size?",
     answer:
-      "We provide a detailed size guide on each product page. If you’re unsure, our support team is happy to help you choose the perfect fit.",
+      "Our product pages include a detailed size chart. If you're unsure, reach out to our support — we're happy to help you get the right fit.",
   },
   {
-    question: "Can I place a bulk or wholesale order?",
+    question: "Can I order in bulk for a team or crew?",
     answer:
-      "Absolutely! We welcome bulk and wholesale inquiries. Please contact us directly for tailored pricing and order details.",
+      "Yes. Rocspace supports bulk and group orders. Contact us directly and we’ll hook you up with tailored pricing and info.",
   },
 ];
 
@@ -57,9 +57,11 @@ const FAQAccordion: React.FC = () => {
       <div className="p-8 bg-gray-100 min-h-screen">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-gray-800 font-luxe">Why Choose Crystal Vibe Luxury?</h1>
+          <h1 className="text-4xl font-bold text-gray-800 font-luxe">
+            Why Rock With Rocspace?
+          </h1>
           <p className="mt-4 text-gray-600">
-            Explore how Crystal Vibe blends quality, elegance, and confidence into every bag and shoe we craft for the modern woman.
+            Discover how Rocspace delivers streetwear with attitude, quality, and confidence in every stitch.
           </p>
         </div>
 
@@ -75,7 +77,9 @@ const FAQAccordion: React.FC = () => {
                 onClick={() => toggleAccordion(index)}
                 className="flex justify-between items-center p-5 cursor-pointer transition duration-300 hover:bg-gray-50"
               >
-                <h3 className="text-lg font-semibold text-gray-800">{faq.question}</h3>
+                <h3 className="text-lg font-semibold text-gray-800">
+                  {faq.question}
+                </h3>
                 <motion.div
                   className="text-gray-500"
                   animate={{ rotate: activeIndex === index ? 180 : 0 }}
@@ -102,6 +106,7 @@ const FAQAccordion: React.FC = () => {
           ))}
         </div>
       </div>
+
       <ReviewComponent />
     </>
   );

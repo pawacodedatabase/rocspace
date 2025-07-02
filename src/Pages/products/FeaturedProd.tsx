@@ -60,14 +60,15 @@ const FeaturedProduct: React.FC = () => {
 
   return (
     <div className="mt-8">
-      <h2 className="text-2xl font-bold text-center mb-6 font-riss">Featured Products</h2>
+      <h2 className="text-2xl font-bold text-center mb-6 font-graffiti"> <span className='text-red-500'>Featured </span>
+         Products</h2>
     
   <div className="flex justify-center">
-  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 p-5 max-w-7xl w-full">
+  <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-6 p-5 max-w-7xl w-full">
     {randomProducts.map((product: Product) => (
       <div
         key={product.id}
-        className="group relative bg-white border border-gray-200 rounded-md overflow-hidden shadow-md transition-transform duration-300 hover:scale-105 w-full max-w-[350px] mx-auto"
+        className="group relative bg-white border border-gray-200 rounded-md overflow-hidden shadow-md transition-transform duration-300  w-full max-w-[350px] mx-auto"
       >
         {/* Image Swap on Hover */}
         <Link to={`/product/${product.id}`} className="block relative w-full h-[500px]">
@@ -85,10 +86,7 @@ const FeaturedProduct: React.FC = () => {
           )}
         </Link>
 
-        {/* Hover "SELECT OPTIONS" Button */}
-        <div className="absolute bottom-0 left-0 right-0 bg-black text-white text-center text-sm py-3 opacity-0 group-hover:opacity-100 transition duration-300 cursor-pointer">
-          SELECT OPTIONS
-        </div>
+       
 
         {/* Product Name */}
         <p className="text-center text-black text-xs mt-4 tracking-wide">{product.name.toUpperCase()}</p>
