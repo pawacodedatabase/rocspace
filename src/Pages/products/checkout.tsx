@@ -7,13 +7,13 @@ interface CartItem {
 }
 
 const deliveryFees = [
-  { state: "West (W)", fee: 2500 },
-  { state: "North (N)", fee: 3500 },
-  { state: "East (E)", fee: 3500 },
-  { state: "South (S)", fee: 35500 },
+  { state: "Nigeria", fee: 20 },
+  { state: "United State", fee: 25 },
+  { state: "United Kingdom", fee: 30 },
+  { state: "Other European Countries", fee: 30 },
 ];
 
-const API_KEY = "$2a$10$qrNF.b6EVU4HN2N8Dvegaez/mp2L7ZO9EjET5ujsIiWNSfuOyB.mu";
+const API_KEY = "$2a$10$yti1izYQ7PKY9IhwxrQiuuIk8TZDdxM6nzYFnduMOvJtKIdyRhBB.";
 
 const Checkout: React.FC = () => {
   const [cart, setCart] = useState<CartItem[]>([]);
@@ -38,7 +38,7 @@ const Checkout: React.FC = () => {
     const fetchProducts = async () => {
       try {
         const response = await fetch(
-          "https://api.jsonbin.io/v3/b/680c93278a456b796691bca7/latest",
+          "https://api.jsonbin.io/v3/b/6864f0d78960c979a5b5b7ad/latest",
           {
             headers: {
               "X-Master-Key": API_KEY,

@@ -24,18 +24,18 @@ export default function BusinessPopup() {
 
         <img src={logo} alt=" Logo" width={60} className="mx-auto mb-4" />
 
-        <h2 className="font-semibold text-xl text-black  mb-2">Explore & Learn</h2>
+        <h2 className="font-semibold text-xl text-black  mb-2 font-graffiti">Explore & Learn</h2>
 
         <p className="text-sm text-gray-500 mb-5">
           Want to style better or shop smarter? Visit our{" "}
-          <span className="text-white font-medium">Blog</span> for fashion tips, or check our{" "}
+          <span className="text-red-500 font-bold ">Blog</span> for fashion tips, or check our{" "}
           <span className="text-white font-medium">Size Guide</span> to find your perfect fit!
         </p>
 
         <div className="flex flex-col gap-3">
           <Link
             to={"/blog"}
-            className="bg-yellow-300 text-black font-semibold py-2 rounded-lg hover:bg-yellow-400 transition"
+            className="bg-red-500 text-black  font-semibold py-2 rounded-lg hover:bg-yellow-400 transition"
           >
             Visit Blog
           </Link>
